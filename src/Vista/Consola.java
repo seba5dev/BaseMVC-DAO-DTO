@@ -15,35 +15,56 @@ public class Consola {
     public void printMsg(String pMen){
         System.out.println(pMen);
     }
-
-    //Metodo para leer enteros
-    public int readInt(String pStr){
-        System.out.println(pStr);
-        int num = sc.nextInt();
-        sc.nextLine();
-        return num;
-    }
-
+    
     //Metodo para leer String
     public String readString(String pStr){
         System.out.println(pStr);
         String str = sc.nextLine();
         return str;
     }
-
+    
+    //Metodo para leer enteros
+    public int readInt(String pStr){
+        int i;
+        try {
+            System.out.println(pStr);
+            i = sc.nextInt();
+            sc.nextLine();
+        } catch (Exception e) {
+            sc.nextLine();
+            System.out.println("El dato ingresado no es un numero.");
+            i = 0;
+        }
+        return i;
+    }
+    
     //Metodo para leer Double
     public double readDouble(String pStr){
-        System.out.println(pStr);
-        double d = sc.nextDouble();
-        sc.nextLine();
+        double d;
+        try {
+            System.out.println(pStr);
+            d = sc.nextDouble();
+            sc.nextLine();
+        } catch (Exception e) {
+            sc.nextLine();
+            System.out.println("El dato ingresado no es un numero.");
+            d = 0;
+        }
         return d;
     }
 
     //Metodo para leer long
     public long readLong(String pStr){
-        System.out.println(pStr);
-        long l = sc.nextLong();
-        sc.nextLine();
+        long l;
+        try {
+            System.out.println(pStr);
+            l = sc.nextLong();
+            sc.nextLine();
+        } catch (Exception e) {
+            sc.nextLine();
+            System.out.println("El dato ingresado no es un numero.");
+            l = 0;
+        }
         return l;
     }
 
